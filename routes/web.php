@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(
+    [
+        'namespace' => 'App\Http\Controllers',
+    ],
+    function () {
+        Route::get('firebase' , 'FirebaseController@index');
+        Route::get('send' , 'FirebaseController@sendFirebase')->name('send.firebase');
+        Route::get('foodrequest' , 'FirebaseController@showRequest')->name('send.firebase');
+    }
+);
+
