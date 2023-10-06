@@ -24,7 +24,7 @@ Route::group(
     function () {
         Route::get('firebase' , 'FirebaseController@index');
         Route::get('send' , 'FirebaseController@sendFirebase')->name('send.firebase');
-        Route::get('foodrequest' , 'FirebaseController@showRequest')->name('send.firebase');
+        Route::get('foodrequest' , 'FirebaseController@showRequest')->name('send.frequest');
     }
 );
 
