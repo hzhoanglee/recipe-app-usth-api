@@ -13,7 +13,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return Category::orderBy('order')->get();
+        return Category::orderBy('order')->paginate(100);
     }
 
     public function categoryData(Request $request) {
