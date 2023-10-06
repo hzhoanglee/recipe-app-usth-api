@@ -53,7 +53,7 @@ class RecipeController extends Controller
         $user_id = 0;
         $name = $request->name;
         if(Auth::guard('api')->check()) {
-            $user_id = Auth::guard('api')->user()->id();
+            $user_id = Auth::guard('api')->user()->id;
         }
         RecipeRequest::create([
             'request_by' => $user_id,
